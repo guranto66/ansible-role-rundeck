@@ -79,8 +79,8 @@ rundeck_ldap_bindPassword: bindpassword
 rundeck_ldap_authenticationMethod: simple
 rundeck_ldap_forceBindingLogin: true
 rundeck_ldap_userBaseDn: cn=users,cn=accounts,dc=ipa,dc=domain
-rundeck_ldap_userRdnAttribute: userPrincipalName
-rundeck_ldap_userIdAttribute: userPrincipalName
+rundeck_ldap_userRdnAttribute: sAMAccountName
+rundeck_ldap_userIdAttribute: sAMAccountName
 rundeck_ldap_userLastNameAttribute: sn
 rundeck_ldap_userFirstNameAttribute: givenName
 rundeck_ldap_userEmailAttribute: mail
