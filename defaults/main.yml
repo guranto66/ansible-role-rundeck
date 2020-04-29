@@ -72,25 +72,24 @@ rundeck_plugins: []
   # - https://github.com/Batix/rundeck-ansible-plugin/releases/download/3.1.1/ansible-plugin-3.1.1.jar
 
 
-rundeck_ldap:
-  debug: false
-  providerUrl: ldap://server.domain:389
-  bindDn: uid=binduser,cn=users,cn=accounts,dc=domain,dc=domain
-  bindPassword: bindpassword
-  authenticationMethod: simple
-  forceBindingLogin: true
-  userBaseDn: cn=users,cn=accounts,dc=ipa,dc=domain
-  userRdnAttribute: userPrincipalName
-  userIdAttribute: userPrincipalName
-  userLastNameAttribute: sn
-  userFirstNameAttribute: givenName
-  userEmailAttribute: mail
-  userPasswordAttribute: unicodePwd
-  userObjectClass: user
-  roleBaseDn: cn=groups,cn=accounts,dc=ipa,dc=domain
-  roleNameAttribute: cn
-  roleMemberAttribute: member
-  roleObjectClass: group
-  cacheDurationMillis: 300000
-  reportStatistics: true
-  nestedGroups: true
+rundeck_ldap_debug: false
+rundeck_ldap_providerUrl: ldap://server.domain:389
+rundeck_ldap_bindDn: uid=binduser,cn=users,cn=accounts,dc=domain,dc=domain
+rundeck_ldap_bindPassword: bindpassword
+rundeck_ldap_authenticationMethod: simple
+rundeck_ldap_forceBindingLogin: true
+rundeck_ldap_userBaseDn: cn=users,cn=accounts,dc=ipa,dc=domain
+rundeck_ldap_userRdnAttribute: userPrincipalName
+rundeck_ldap_userIdAttribute: userPrincipalName
+rundeck_ldap_userLastNameAttribute: sn
+rundeck_ldap_userFirstNameAttribute: givenName
+rundeck_ldap_userEmailAttribute: mail
+rundeck_ldap_userPasswordAttribute: unicodePwd
+rundeck_ldap_userObjectClass: user
+rundeck_ldap_roleBaseDn: cn=groups,cn=accounts,dc=ipa,dc=domain
+rundeck_ldap_roleNameAttribute: cn
+rundeck_ldap_roleMemberAttribute: member
+rundeck_ldap_roleObjectClass: group
+rundeck_ldap_cacheDurationMillis: 300000
+rundeck_ldap_reportStatistics: true
+rundeck_ldap_nestedGroups: true
