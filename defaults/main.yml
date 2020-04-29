@@ -77,13 +77,20 @@ rundeck_ldap:
   providerUrl: ldap://server.domain:389
   bindDn: uid=binduser,cn=users,cn=accounts,dc=domain,dc=domain
   bindPassword: bindpassword
+  authenticationMethod: simple
+  forceBindingLogin: true
   userBaseDn: cn=users,cn=accounts,dc=ipa,dc=domain
-  userRdnAttribute: uid
-  userIdAttribute: uid
-  userPasswordAttribute: userPassword
-  userObjectClass: inetOrgPerson
+  userRdnAttribute: userPrincipalName
+  userIdAttribute: userPrincipalName
+  userLastNameAttribute: sn
+  userFirstNameAttribute: givenName
+  userEmailAttribute: mail
+  userPasswordAttribute: unicodePwd
+  userObjectClass: user
   roleBaseDn: cn=groups,cn=accounts,dc=ipa,dc=domain
   roleNameAttribute: cn
   roleMemberAttribute: member
-  roleObjectClass: groupOfNames
-  domain: ipa.domain
+  roleObjectClass: group
+  cacheDurationMillis: 300000
+  reportStatistics: true
+  nestedGroups: true
