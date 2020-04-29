@@ -80,6 +80,13 @@
   loop: "{{ rundeck_plugins }}"
   when: rundeck_plugins is defined
 
+- name: add jaas-ldap.conf
+  template:
+    src: jaas-ldap.conf.j2
+    dest: "{{ rundeck_rdeckbase }}/server/config/jaas-ldap.conf"
+  notify:
+    - restart rundeck
+
 - name: start rundeck
   service:
     name: rundeck

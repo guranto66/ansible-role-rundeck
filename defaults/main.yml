@@ -70,3 +70,20 @@ rundeck_users:
 # Rundeck plugins to install
 rundeck_plugins: []
   # - https://github.com/Batix/rundeck-ansible-plugin/releases/download/3.1.1/ansible-plugin-3.1.1.jar
+
+
+rundeck_ldap:
+  debug: false
+  providerUrl: ldap://server.domain:389
+  bindDn: uid=binduser,cn=users,cn=accounts,dc=domain,dc=domain
+  bindPassword: bindpassword
+  userBaseDn: cn=users,cn=accounts,dc=ipa,dc=domain
+  userRdnAttribute: uid
+  userIdAttribute: uid
+  userPasswordAttribute: userPassword
+  userObjectClass: inetOrgPerson
+  roleBaseDn: cn=groups,cn=accounts,dc=ipa,dc=domain
+  roleNameAttribute: cn
+  roleMemberAttribute: member
+  roleObjectClass: groupOfNames
+  domain: ipa.domain
